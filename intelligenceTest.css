@@ -1,0 +1,52 @@
+span.hidden-message
+{
+  opacity: 0.0;
+}
+span.shown-message
+{
+  opacity: 1.0;
+}
+
+body
+{
+  font-family: sans-serif;
+}
+
+div.examples > h4
+{
+  font-weight: bold;
+}
+
+div.examples > p
+{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h1.heading
+{
+  text-align: center;
+  font-weight: bold;
+}
+
+.input
+{
+  font-size: 20px;
+  font-weight: bold;
+  color: #0000FF;
+}
+
+#tests
+{
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 200%;
+  text-align: center;
+}
+
+.footer
+{
+  position: absolute;
+  bottom: 0;
+  left: 37%;
+}
