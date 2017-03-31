@@ -10,10 +10,14 @@ span.shown-message
 body
 {
   font-family: sans-serif;
+  background-image: url("https://memorado.com/assets/appraisals/iqtest/results/iqtest-en.jpg");
+  color: black;
+  text-align: center;
 }
 
-div.examples > h4
+div.examples > h3
 {
+  color: red;
   font-weight: bold;
 }
 
@@ -25,7 +29,18 @@ div.examples > p
 
 h1.heading
 {
-  text-align: center;
+  letter-spacing: 12px;
+  font-weight: bold;
+}
+
+div.userInputIntro
+{
+  margin-top: 50px;
+  color: red;
+}
+
+div.userInputIntro > h4
+{
   font-weight: bold;
 }
 
@@ -41,12 +56,11 @@ h1.heading
   font-weight: bold;
   font-size: 20px;
   line-height: 200%;
-  text-align: center;
 }
 
 .footer
 {
   position: absolute;
   bottom: 0;
-  left: 37%;
+  left: 40%;
 }

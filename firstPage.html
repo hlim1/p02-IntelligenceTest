@@ -9,22 +9,31 @@
   </head>
   <body>
     <h1 class="heading">Intelligence Test</h1>
+    <div>
     <div class="examples">
-      <h4>Here are the examples:</h4>
-      <p>7,3 = 41021</p>
-      <p>8,3 = 51124</p>
-      <p>5,4 = 1920</p>
-      <p>9,6 = 31554</p>
-      <p>7,4 = 31128</p>
+      <h3>Here are the examples:</h3>
+      <p>7,3 -> 41021</p>
+      <p>8,3 -> 51124</p>
+      <p>5,4 -> 1920</p>
+      <p>9,6 -> 31554</p>
+      <p>7,4 -> 31128</p>
     </div>
-    <div id="userInputGroup">
-        <p class="input">17,8 =</p>
-        <input type="text" id="userFirstInput" class="input-md"
-         placeholder="Your Answer" oninput="validateFirstAnswer()"/>
-        <span id="userInputError" class="control-label hidden-message">
-          Error Placeholder (hidden)
+    <div class="userInputIntro">
+      <h4>Now, try it for yourself</h4>
+      <p>Look at the examples above carefully and find the pattern to solve the question below</p>
+    </div>
+    <form class="form-horizontal">
+      <div class="form-group" id="userInputGroup">
+        <p class="input">17,8 -></p>
+        <div>
+          <input type="text" id="userFirstInput" class="input-md"
+           placeholder="Your Answer" oninput="validateFirstAnswer()"/><br/>
+          <span id="userInputError" class="control-label hidden-message">
+            Error Placeholder (hidden)
+          </span>
         </span>
-    </div>
+      </div>
+    </form>
 
     <br/>
 
