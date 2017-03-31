@@ -1,11 +1,18 @@
-var runningTotal = 0.0;
+// HeuiChan Lim
+
+var runningTotal;
+
+function initializer()
+{
+  runningTotal = Number(0.0);
+}
 
 function validateFirstAnswer()
 {
   var userInput = document.getElementById("userFirstInput").value;
   var errorTrue = document.getElementById("userInputGroup").classList.contains("has-error");
 
-  if (userInput != 925136 && userInput != "")
+  if (userInput != 925136 && userInput != "" && isNaN(userInput))
   {
     // Show message that there is an error with the the user's input...
     document.getElementById("userInputError").innerHTML="This is not a correct answer.<br/>Please, try again.";
@@ -39,8 +46,9 @@ function validateFirstAnswer()
     document.getElementById("userInputGroup").classList.add("has-success");
 
 
-    runningTotal = runningTotal + 1;
+    runningTotal = Number(runningTotal + 1);
     setCookie("score", runningTotal, 3);
+    console.log(runningTotal);
   }
 }
 
@@ -49,7 +57,7 @@ function validateSecondAnswer()
   var userInput = document.getElementById("userFirstInput").value;
   var errorTrue = document.getElementById("userInputGroup").classList.contains("has-error");
 
-  if (userInput != 216 && userInput != "")
+  if (userInput != 216 && userInput != "" && isNaN(userInput))
   {
     // Show message that there is an error with the the user's input...
     document.getElementById("userInputError").innerHTML="This is not a correct answer.<br/>Please, try again.";
@@ -84,6 +92,7 @@ function validateSecondAnswer()
 
     runningTotal = runningTotal + 1;
     setCookie("score", runningTotal, 3);
+    console.log(runningTotal);
   }
 }
 
