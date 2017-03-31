@@ -40,7 +40,7 @@ function validateFirstAnswer()
 
 
     runningTotal = runningTotal + 1;
-    setCookie("score", runningTotal, 1);
+    setCookie("score", runningTotal, 3);
   }
 }
 
@@ -83,7 +83,7 @@ function validateSecondAnswer()
     document.getElementById("userInputGroup").classList.add("has-success");
 
     runningTotal = runningTotal + 1;
-    setCookie("score", runningTotal, 1);
+    setCookie("score", runningTotal, 3);
   }
 }
 
@@ -126,9 +126,17 @@ function validateLastAnswer()
     document.getElementById("userInputGroup").classList.add("has-success");
 
     runningTotal = runningTotal + 1;
-    setCookie("score", runningTotal, 1);
+    setCookie("score", runningTotal, 3);
   }
 }
+
+function result()
+{
+  var totalResult = getCookie("score");
+  document.getElementById("totalScore").innerHTML = totalResult;
+  console.log(totalResult);
+}
+
 //courtesy of w3schools, from: http://www.w3schools.com/js/js_cookies.asp
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
