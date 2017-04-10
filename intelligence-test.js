@@ -1,25 +1,18 @@
 // HeuiChan Lim
 
-var runningTotal;
-
-function initializer()
-{
-  runningTotal = Number(0.0);
-}
-
 function validateFirstAnswer()
 {
   var userInput = document.getElementById("userFirstInput").value;
   var errorTrue = document.getElementById("userInputGroup").classList.contains("has-error");
 
-  if (userInput != 925136 && userInput != "" && isNaN(userInput))
+  if ((userInput != 925136 && userInput != "") || isNaN(userInput))
   {
     // Show message that there is an error with the the user's input...
     document.getElementById("userInputError").innerHTML="This is not a correct answer.<br/>Please, try again.";
     document.getElementById("userInputError").classList.remove("hidden-message");
     document.getElementById("userInputError").classList.add("shown-message");
     // Turn the username items red
-    document.getElementById("userInputGroup").classList.add("has-error");    
+    document.getElementById("userInputGroup").classList.add("has-error");
   }
   else if (userInput == "" && errorTrue)
   {
@@ -45,10 +38,7 @@ function validateFirstAnswer()
     document.getElementById("userInputError").classList.add("shown-message");
     document.getElementById("userInputGroup").classList.add("has-success");
 
-
-    runningTotal = Number(runningTotal + 1);
-    setCookie("score", runningTotal, 3);
-    console.log(runningTotal);
+    setCookie("score", 1, 9999);
   }
 }
 
@@ -56,8 +46,9 @@ function validateSecondAnswer()
 {
   var userInput = document.getElementById("userFirstInput").value;
   var errorTrue = document.getElementById("userInputGroup").classList.contains("has-error");
+  var total = Number(getCookie("score"));
 
-  if (userInput != 216 && userInput != "" && isNaN(userInput))
+  if ((userInput != 216 && userInput != "") || isNaN(userInput))
   {
     // Show message that there is an error with the the user's input...
     document.getElementById("userInputError").innerHTML="This is not a correct answer.<br/>Please, try again.";
@@ -90,9 +81,8 @@ function validateSecondAnswer()
     document.getElementById("userInputError").classList.add("shown-message");
     document.getElementById("userInputGroup").classList.add("has-success");
 
-    runningTotal = runningTotal + 1;
-    setCookie("score", runningTotal, 3);
-    console.log(runningTotal);
+    total++;
+    setCookie("score", total, 9999);
   }
 }
 
@@ -100,6 +90,7 @@ function validateLastAnswer()
 {
   var userInput = document.getElementById("userFirstInput").value;
   var errorTrue = document.getElementById("userInputGroup").classList.contains("has-error");
+  var total = Number(getCookie("score"));
 
   if (userInput != "Mr. Seventy Two" && userInput != "")
   {
@@ -134,8 +125,8 @@ function validateLastAnswer()
     document.getElementById("userInputError").classList.add("shown-message");
     document.getElementById("userInputGroup").classList.add("has-success");
 
-    runningTotal = runningTotal + 1;
-    setCookie("score", runningTotal, 3);
+    total++;
+    setCookie("score", total, 9999);
   }
 }
 
